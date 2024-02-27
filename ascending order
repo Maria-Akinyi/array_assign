@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main(){
+//to declare the array
+    int arr1[5];
+    int i;
+    int n;
+    int d;
+    int z;
+//to get number of elements from user
+    printf("Enter number of elements \n");
+    scanf("%d", &n);
+    printf("Enter %d integers\n", n);
+//to initialize the array
+    for(i=0;i<n;i++){
+            scanf("%d",&arr1[i]);
+    }
+//to sort in ascending order
+    for (i=1;i<=n-1;i++){
+       d=i;
+       while (d>0 && arr1[d]<arr1[d-1]){
+        z=arr1[d];
+        arr1[d]=arr1[d-1];
+        arr1[d-1]=z;
+        d--;
+       }
+    }
+    printf("List in ascending order \n");
+    for (i=0;i<n-1;i++){
+        printf("%d\n", arr1[i]);
+    }
+    return 0;
+}
