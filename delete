@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main(){
+//to declare the array
+    int arr2[5];
+    int i;
+    int n;
+    int position;
+//to get number of elements from user
+    printf("Enter number of elements \n");
+    scanf("%d", &n);
+    printf("Enter %d integers\n", n);
+//to initialize the array
+    for(i=0;i<n;i++){
+            scanf("%d",&arr2[i]);
+    }
+    printf("Enter position of element you want to delete\n");
+    scanf("%d", &position);
+//to check if deletion is possible
+    if (position >=n+1)
+        printf("Cannot delete element");
+//to remove the element
+        else {
+          for (i=position-1;i<n-1;i++);
+            arr2[i]=arr2[i+1];
+            printf("New array is\n");
+            for(i=0;i<n-1;i++);
+            printf("%d\n",arr2[i]);
+        }
+    return 0;
+}
+
